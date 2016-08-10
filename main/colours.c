@@ -1,6 +1,11 @@
 #include<stdio.h>
 #include <gtk/gtk.h>
 
+void button_clicked(GtkWidget *box, gpointer data) {
+    
+  g_print("clicked\n");
+}
+
 int main(int argc, char *argv[]) {
 
   GtkWidget *window;
