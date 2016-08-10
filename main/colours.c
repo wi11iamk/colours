@@ -21,15 +21,15 @@ int main(int argc, char *argv[]) {
   vbox = gtk_vbox_new(TRUE, 1);
   gtk_container_add(GTK_CONTAINER(window), vbox);
 
-  line = gtk_button_new_with_label("Ln");
-  func = gtk_button_new_with_label("Fx");
-  di = gtk_button_new_with_label("Di");
-  ax = gtk_button_new_with_label("Ax");
+  ln = gtk_button_new_with_label("Line");
+  fx = gtk_button_new_with_label("Sine");
+  di = gtk_button_new_with_label("Dice");
+  ax = gtk_button_new_with_label("Guitar");
 
-  gtk_box_pack_start(GTK_BOX(vbox), settings, TRUE, TRUE, 0);
-  gtk_box_pack_start(GTK_BOX(vbox), accounts, TRUE, TRUE, 0);
-  gtk_box_pack_start(GTK_BOX(vbox), loans, TRUE, TRUE, 0);
-  gtk_box_pack_start(GTK_BOX(vbox), cash, TRUE, TRUE, 0);
+  gtk_box_pack_start(GTK_BOX(vbox), ln, TRUE, TRUE, 0);
+  gtk_box_pack_start(GTK_BOX(vbox), fx, TRUE, TRUE, 0);
+  gtk_box_pack_start(GTK_BOX(vbox), di, TRUE, TRUE, 0);
+  gtk_box_pack_start(GTK_BOX(vbox), ax, TRUE, TRUE, 0);
 
   g_signal_connect(G_OBJECT(window), "destroy",
         G_CALLBACK(gtk_main_quit), G_OBJECT(window));
