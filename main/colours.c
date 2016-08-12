@@ -27,10 +27,10 @@ int main(int argc, char *argv[]) {
   box = gtk_box_new(TRUE, 1);
   gtk_container_add(GTK_CONTAINER(window), box);
 
-  ln = gtk_button_new_with_label("Line");
-  fx = gtk_button_new_with_label("Sine");
-  di = gtk_button_new_with_label("Dice");
-  ax = gtk_button_new_with_label("Axe");
+  ln = gtk_button_new_with_label("Violet");
+  fx = gtk_button_new_with_label("Blue");
+  di = gtk_button_new_with_label("Green");
+  ax = gtk_button_new_with_label("Red");
 
   gtk_box_pack_start(GTK_BOX(box), ln, TRUE, TRUE, 0);
   gtk_box_pack_start(GTK_BOX(box), fx, TRUE, TRUE, 0);
