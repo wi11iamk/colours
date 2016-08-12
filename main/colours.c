@@ -1,7 +1,7 @@
 #include<stdio.h>
 #include <gtk/gtk.h>
 
-void button_clicked(GtkWidget *box, gpointer data) {
+void button_clicked(GtkWidget *widget, gpointer data) {
     
   g_print("clicked\n");
 }
@@ -36,6 +36,18 @@ int main(int argc, char *argv[]) {
   gtk_box_pack_start(GTK_BOX(box), fx, TRUE, TRUE, 0);
   gtk_box_pack_start(GTK_BOX(box), di, TRUE, TRUE, 0);
   gtk_box_pack_start(GTK_BOX(box), ax, TRUE, TRUE, 0);
+
+  g_signal_connect(G_OBJECT(ln), "clicked", 
+      G_CALLBACK(button_clicked), NULL);
+      
+  g_signal_connect(G_OBJECT(fx), "clicked", 
+      G_CALLBACK(button_clicked), NULL);
+      
+  g_signal_connect(G_OBJECT(di), "clicked", 
+      G_CALLBACK(button_clicked), NULL);
+      
+  g_signal_connect(G_OBJECT(ax), "clicked", 
+      G_CALLBACK(button_clicked), NULL);
 
   g_signal_connect(G_OBJECT(window), "destroy",
         G_CALLBACK(gtk_main_quit), G_OBJECT(window));
