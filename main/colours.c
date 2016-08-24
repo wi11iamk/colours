@@ -34,63 +34,62 @@ void addNode(list * l, char * path);
 #define MAX_COMMAND_LEN MAX_PATH_LEN + 150
 #define EXECUTED_FILE "widget"
 
+int isRegularFile(const char *path);
 /**
  * consider whether the current file is a regular file 
- * @param path
+ * @param       path
  * @return 1 or 0
  */
-int isRegularFile(const char *path);
 
+int isSourceFile(char * name);
 /**
  * consider whether the current file is a file that has C extension 
- * @param name
+ * @param       name
  * @return 
  */
-int isSourceFile(char * name);
 
-/**
- * get all source file in the path
- * @param names list of file
- * @param paths list of file with path
- * @param path path to the consider folder
- */
 void collectSourceFile(list * names, list * paths, const char *path);
-
 /**
- * create a command from the input path file
- * @param path
+ * gather all source files in the directory path
+ * @param       names list of file
+ * @param       paths list of file with path
+ * @param       path path to the consider folder
+ */
+
+char * createCompilingCommand(const char * path);
+/**
+ * create a command from the input file path
+ * @param       path
  * @return a command line
  */
-char * createCompilingCommand(const char * path);
 
-/**
- * fire when button of the sub menu is click
- * @param widget the button
- * @param data path to the executed file
- */
 void button_action(GtkWidget *widget, gpointer data);
-
 /**
- * process the sub pane
- * @param names list of file
- * @param paths list of file to be compiled
- * @param title name of the folder
+ * activate when a button of the sub-menu is clicked
+ * @param       widget the button
+ * @param       data path to the executed file
  */
+
 void paneProcessing(list * names, list * paths, const char * title);
-
-
 /**
- * process a path. get the file , compile it, execute it
- * @param path path to the file 
+ * process and create the sub-window
+ * @param       names list of file
+ * @param       paths list of file to be compiled
+ * @param       title name of the folder
  */
-void processing(const char *path);
 
+void processing(const char *path);
+/**
+ * process a path to the file - get the file along the specified path, compile it, execute it
+ * @param       path path to the file 
+ */
+
+int isDirectory(const char *path);
 /**
  * consider whether the current file is a directory 
- * @param path
+ * @param       path
  * @return 1 or 0
  */
-int isDirectory(const char *path);
 
 
 void button_clicked(GtkWidget *widget, gpointer data);
@@ -110,7 +109,7 @@ int main(int argc, char *argv[]) {
     window = gtk_window_new(GTK_WINDOW_TOPLEVEL);
     gtk_window_set_position(GTK_WINDOW(window), GTK_WIN_POS_CENTER);
     gtk_window_set_default_size(GTK_WINDOW(window), 230, 500);
-    gtk_window_set_title(GTK_WINDOW(window), "colourS");
+    gtk_window_set_title(GTK_WINDOW(window), "colours");
     gtk_container_set_border_width(GTK_CONTAINER(window), 5);
 
     box = gtk_box_new(TRUE, 1);
