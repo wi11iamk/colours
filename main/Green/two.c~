@@ -7,7 +7,7 @@
 
 #include "di.h"
 
-#define RADIUS      50      // radius of a circle
+#define RADIUS      100      // radius of a circle
 
 int main( void )
 { 
@@ -22,8 +22,8 @@ int main( void )
     lastColorChange = timer;
     
     // array of circles 
-    Circle circles[5];
-    int length = 5;
+    Circle circles[2];
+    int length = 2;
     int i;
     
     // time to wait before moving the circle 
@@ -48,7 +48,7 @@ int main( void )
     }
     
     // Create a windowed mode window and its OpenGL context
-    window = glfwCreateWindow( SCREEN_WIDTH, SCREEN_HEIGHT, "five", NULL, NULL );
+    window = glfwCreateWindow( SCREEN_WIDTH, SCREEN_HEIGHT, "two", NULL, NULL );
     
     if ( !window )
     {
@@ -142,7 +142,7 @@ void moves(Circle circle[], int length, int index){
     while (c.xVector == 0.0) {
         c.xVector = (rand() % DISTANCE) * direction[rand() % 2] ;
     }
-    // the circle won't move along a vertical line  
+    // the circle won't move along a vertical line 
     while (c.yVector == 0.0) {
          c.yVector = (rand() % DISTANCE) * direction[rand() % 2];    
     }
@@ -182,27 +182,21 @@ void initCircleArray(Circle circle[], int length ){
     int i;
     
     // set position
-    circle[0].x = RADIUS + 5;
-    circle[1].x = SCREEN_WIDTH - RADIUS - 5;
-    circle[2].x = RADIUS + 5;
-    circle[3].x = SCREEN_WIDTH - RADIUS - 5;
-    circle[4].x = SCREEN_WIDTH / 2;
-
-    circle[0].y = SCREEN_HEIGHT - RADIUS - 5;
-    circle[1].y = SCREEN_HEIGHT - RADIUS - 5;
-    circle[2].y = RADIUS + 5;
-    circle[3].y = RADIUS + 5;
-    circle[4].y = SCREEN_HEIGHT / 2; 
+    circle[0].x = RADIUS;
+    circle[1].x = SCREEN_WIDTH - RADIUS;
+    
+    circle[0].y = SCREEN_HEIGHT - RADIUS;
+    circle[1].y = RADIUS;
     
     // initialize circles    
     for (i = 0; i < length; i++) {
         circle[i] = initCircle(circle[i]);  
     } 
     
-    // set color of the central circle to green
-    circle[4].colour[0] = 0;
-    circle[4].colour[1] = 255;
-    circle[4].colour[2] = 0; 
+    // set color of the upper right circle to green
+    circle[1].colour[0] = 0;
+    circle[1].colour[1] = 255;
+    circle[1].colour[2] = 0; 
 }
 
 Circle initCircle(Circle circle){

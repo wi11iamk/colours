@@ -126,9 +126,9 @@ int main(void) {
 }
 
 void playSound() {
-    char * sound [] = {"sounds/scale-a6.wav", "sounds/scale-c6.wav", "sounds/scale-c7.wav"
-        , "sounds/scale-d6.wav", "sounds/scale-e6.wav", "sounds/scale-f6.wav",
-        "sounds/scale-g6.wav", "sounds/scale-h6.wav"};
+    char * sound [] = {"Sounds/scale-a6.wav", "Sounds/scale-c6.wav", "Sounds/scale-c7.wav"
+        , "Sounds/scale-d6.wav", "Sounds/scale-e6.wav", "Sounds/scale-f6.wav",
+        "Sounds/scale-g6.wav", "Sounds/scale-h6.wav"};
     int index = rand() % 8;
     ALuint buffer, source;
     ALuint state;

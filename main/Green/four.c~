@@ -7,7 +7,7 @@
 
 #include "di.h"
 
-#define RADIUS      50      // radius of a circle
+#define RADIUS      66      // radius of a circle
 
 int main( void )
 { 
@@ -22,8 +22,8 @@ int main( void )
     lastColorChange = timer;
     
     // array of circles 
-    Circle circles[5];
-    int length = 5;
+    Circle circles[4];
+    int length = 4;
     int i;
     
     // time to wait before moving the circle 
@@ -48,7 +48,7 @@ int main( void )
     }
     
     // Create a windowed mode window and its OpenGL context
-    window = glfwCreateWindow( SCREEN_WIDTH, SCREEN_HEIGHT, "five", NULL, NULL );
+    window = glfwCreateWindow( SCREEN_WIDTH, SCREEN_HEIGHT, "four", NULL, NULL );
     
     if ( !window )
     {
@@ -183,26 +183,24 @@ void initCircleArray(Circle circle[], int length ){
     
     // set position
     circle[0].x = RADIUS + 5;
-    circle[1].x = SCREEN_WIDTH - RADIUS - 5;
-    circle[2].x = RADIUS + 5;
+    circle[1].x = RADIUS + 5;
+    circle[2].x = SCREEN_WIDTH - RADIUS - 5;
     circle[3].x = SCREEN_WIDTH - RADIUS - 5;
-    circle[4].x = SCREEN_WIDTH / 2;
-
-    circle[0].y = SCREEN_HEIGHT - RADIUS - 5;
-    circle[1].y = SCREEN_HEIGHT - RADIUS - 5;
+    
+    circle[0].y = RADIUS + 5;
+    circle[1].y = SCREEN_HEIGHT - RADIUS - 5
     circle[2].y = RADIUS + 5;
-    circle[3].y = RADIUS + 5;
-    circle[4].y = SCREEN_HEIGHT / 2; 
+    circle[3].y = SCREEN_HEIGHT - RADIUS - 5;
     
     // initialize circles    
     for (i = 0; i < length; i++) {
         circle[i] = initCircle(circle[i]);  
     } 
     
-    // set color of the central circle to green
-    circle[4].colour[0] = 0;
-    circle[4].colour[1] = 255;
-    circle[4].colour[2] = 0; 
+    // set color of the lower right circle to green
+    circle[0].colour[0] = 0;
+    circle[0].colour[1] = 255;
+    circle[0].colour[2] = 0; 
 }
 
 Circle initCircle(Circle circle){
