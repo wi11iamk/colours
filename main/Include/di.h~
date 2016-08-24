@@ -1,5 +1,6 @@
 #define SCREEN_WIDTH 1024
 #define SCREEN_HEIGHT 768
+#define M_PI 3.141592653
 #define SIDE_NUM    36      // number of 'sides' (or triangles) used to draw the circles  
 #define DISTANCE    5       // max length of a movement 
 #define TOTAL_TIME  5       // 5 minutes per trial
