@@ -1,6 +1,5 @@
 #define SCREEN_WIDTH 1024
 #define SCREEN_HEIGHT 768
-#define M_PI        3.141592653
 #define SIDE_NUM    36              // numnber of triangles we use to draw a circle  
 #define RADIUS      50              // radius of a circle 
 #define TOTAL_TIME  5.0             // 5 minute run-time 

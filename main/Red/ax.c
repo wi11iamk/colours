@@ -5,7 +5,7 @@
 #include <stdlib.h>
 #include <time.h>
 
-#include "game.h"
+#include "ax.h"
 
 int main(void) {
 
