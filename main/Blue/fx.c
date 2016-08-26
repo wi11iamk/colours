@@ -147,7 +147,7 @@ void drawCircle( GLfloat x, GLfloat y, GLfloat z, GLfloat radius, GLint numberOf
     }
     
     glEnableClientState( GL_VERTEX_ARRAY );
-    glColor3f(1, 0, 1);
+    glColor3f(0, 0, 1);
     glVertexPointer( 3, GL_FLOAT, 0, allCircleVertices );
     glDrawArrays( GL_TRIANGLE_FAN, 0, numberOfVertices );
     glDisableClientState( GL_VERTEX_ARRAY );
