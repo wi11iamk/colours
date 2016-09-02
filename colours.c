@@ -126,16 +126,16 @@ int main(int argc, char *argv[]) {
     gtk_box_pack_start(GTK_BOX(box), ax, TRUE, TRUE, 0);
 
     g_signal_connect(G_OBJECT(ln), "clicked",
-            G_CALLBACK(button_clicked), "Violet");
+            G_CALLBACK(button_clicked), "violet");
 
     g_signal_connect(G_OBJECT(fx), "clicked",
-            G_CALLBACK(button_clicked), "Blue");
+            G_CALLBACK(button_clicked), "blue");
 
     g_signal_connect(G_OBJECT(di), "clicked",
-            G_CALLBACK(button_clicked), "Green");
+            G_CALLBACK(button_clicked), "green");
 
     g_signal_connect(G_OBJECT(ax), "clicked",
-            G_CALLBACK(button_clicked), "Red");
+            G_CALLBACK(button_clicked), "red");
 
     g_signal_connect(G_OBJECT(window), "destroy",
             G_CALLBACK(gtk_main_quit), G_OBJECT(window));
@@ -268,7 +268,7 @@ char * createCompilingCommand(const char * path) {
 
     char * command = (char *) malloc((MAX_COMMAND_LEN) * sizeof (char));
     snprintf(command, MAX_COMMAND_LEN,
-            "gcc -I Include/ `pkg-config --cflags glfw3` -o %s %s `pkg-config --static --libs glfw3` `pkg-config --libs freealut`",
+            "gcc -I include/ `pkg-config --cflags glfw3` -o %s %s `pkg-config --static --libs glfw3` `pkg-config --libs freealut`",
             EXECUTED_FILE, path);
 
     return command;
