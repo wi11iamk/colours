@@ -1,5 +1,5 @@
 # Details
-**Colours** is a therapeutic program that contains a spectrum of stimuli designed to assess and train eye hand coordination.
+*ColourS* is a spectrum of therapeutic programs designed to assess and train eye hand coordination.
 
 Eye hand coordination is the effortful concatenation of eye movement with hand movement. It allows visual input to guide manual tasks (e.g. grasping, reaching) and manual proprioception to guide visual tasks (e.g. gaze control, focus). 
 
