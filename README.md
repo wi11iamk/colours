@@ -19,7 +19,7 @@ Deficient eye hand coordination is often the sum of neuro-physiological disturba
 
 ```
 colours/
-├── blue/               # Blue spectrum training programs
+├── blue/               # fx Blue spectrum training programs
 ├── green/              # Green spectrum training programs
 ├── include/            # Header files and shared resources
 ├── red/                # Red spectrum training programs
@@ -30,6 +30,13 @@ colours/
 ├── LICENSE             # License information
 └── README.md           # Project documentation
 ```
+
+## Program Descriptions
+
+- **Violet** - Users track a coloured circle that moves in linear paths. Accuracy data are collected in time (ms).
+- **Blue** - Users track a coloured circle that moves in simple, sinusoidal paths. Accuracy data are collected in time (ms).
+- **Green** - Users track and select one target circle within a group of circles that move along random paths. Time to click on a target as well as target accuracy data are collected.
+- **Red** - Users track coloured circles that descend from the top of the screen and press keys for each circle that reaches the bottom. Accuracy data are collected in correct key presses.
 
 ## Installation
 
